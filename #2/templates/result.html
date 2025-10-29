@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background-color: white;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #0078D7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: #005ea6;
+        }
+        h3 {
+            color: #0078D7;
+        }
+    </style>
+</head>
+<body>
+    {% if data %}
+        <div class="card">
+            <h3>✅ Feedback Submitted Successfully!</h3>
+            <p><strong>Name:</strong> {{ data.name }}</p>
+            <p><strong>Email:</strong> {{ data.email }}</p>
+            <p><strong>Message:</strong> {{ data.message }}</p>
+        </div>
+    {% else %}
+        <h2 style="color: red;">{{ message }}</h2>
+    {% endif %}
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

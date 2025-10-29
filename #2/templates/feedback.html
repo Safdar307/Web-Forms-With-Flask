@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        form {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #005ea6;
+        }
+        a {
+            text-decoration: none;
+            color: #0078D7;
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Feedback Form</h2>
+    <form action="/submit" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" placeholder="Enter your name"><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" placeholder="Enter your email"><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" rows="4" placeholder="Enter your feedback"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="/">← Back to Home</a>
+</body>
+</html>
